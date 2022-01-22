@@ -24,6 +24,7 @@ class AppStrings {
   static const String gmImg = 'images/gm.png';
   static const String fbImg = 'images/fb.png';
   static const String onboardImg = 'images/onboard.png';
+  static const String monibagImg = 'images/monibag.png';
   static const String strContinue = 'Continue';
   static const String strCreate = 'Create';
   static const String onboardPageStr = 'FAST AND CONVEINENT WAY TO';

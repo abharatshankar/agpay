@@ -16,7 +16,7 @@ class TxtBetweenLines extends StatelessWidget {
           Container(
             height: 1,
             color: Colors.grey,
-            width: MediaQuery.of(context).size.width * 0.35,
+            width: MediaQuery.of(context).size.width * 0.34,
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 6),
@@ -28,7 +28,7 @@ class TxtBetweenLines extends StatelessWidget {
           Container(
             height: 1,
             color: Colors.grey,
-            width: MediaQuery.of(context).size.width * 0.35,
+            width: MediaQuery.of(context).size.width * 0.34,
           ),
         ],
       ),

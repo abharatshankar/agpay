@@ -77,8 +77,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget titleWithAnimation() {
     return Container(
       width: 100,
-      // height: 100,
-      color: Colors.red,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [AppColors.darkYellow, AppColors.brightYellow],
+            begin: const FractionalOffset(0.0, 0.5),
+            end: const FractionalOffset(0.0, 1.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -86,12 +92,11 @@ class _SplashScreenState extends State<SplashScreen> {
             color: Colors.white,
             size: 20,
           ),
-          const Text(
-            'monibag',
-            style: TextStyle(
-              fontSize: 34,
-            ),
-          ),
+          Image.asset(
+            AppStrings.monibagImg,
+            height: 35,
+            fit: BoxFit.fitWidth,
+          )
         ],
       ),
     );
@@ -100,7 +105,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget dotAnimation() {
     return Center(
       child: LoadingAnimationWidget.bouncingBall(
-        color: Colors.white,
+        color: AppColors.whiteColor,
         size: _kSize,
       ),
     );
