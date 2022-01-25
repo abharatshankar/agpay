@@ -36,21 +36,32 @@ class _OnBoardState extends State<OnBoard> {
                     'Welcome to',
                     style: TextStyle(
                       fontSize: 18,
+                      fontFamily: AppFonts.poppinsFont,
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 30,
-                  ),
-                  child: Text(
-                    'Monibag',
-                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-                  ),
-                ),
+                Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                    ),
+                    child: Image.asset(
+                      AppStrings.monibaglogo,
+                      height: 40,
+                    )
+                    // child: Text(
+                    //   'Monibag',
+                    //   style: TextStyle(
+                    //       fontSize: 32,
+                    //       fontWeight: AppFonts.mediumFont,
+                    //       fontFamily: AppFonts.poppinsFont),
+                    // ),
+                    ),
                 const Padding(
                   padding: EdgeInsets.fromLTRB(30, 16, 30, 10),
-                  child: Text(AppStrings.onboardPageStr),
+                  child: Text(AppStrings.onboardPageStr,
+                      style: TextStyle(
+                        fontFamily: AppFonts.poppinsFont,
+                      )),
                 ),
                 const Padding(
                     padding: EdgeInsets.fromLTRB(30, 0, 30, 15),

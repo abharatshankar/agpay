@@ -15,19 +15,21 @@ class TxtBetweenLines extends StatelessWidget {
         children: [
           Container(
             height: 1,
-            color: Colors.grey,
+            color: Colors.grey.shade400,
             width: MediaQuery.of(context).size.width * 0.34,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 6),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 6),
             child: Text(
               'or with',
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(
+                  color: Colors.grey.shade400,
+                  fontFamily: AppFonts.poppinsFont),
             ),
           ),
           Container(
             height: 1,
-            color: Colors.grey,
+            color: Colors.grey.shade400,
             width: MediaQuery.of(context).size.width * 0.34,
           ),
         ],

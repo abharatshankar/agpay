@@ -2,10 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 class AppColors {
-  static const Color darkYellow = Color(0xffE3BB2D);
-  static Color brightYellow = const Color(0xffF7FF37);
+  static const Color darkYellow = Color(0xffF2B807);
+  static Color brightYellow = const Color(0xffF2E205);
   static Color whiteColor = Colors.white;
+  static Color blackColor = const Color(0xff0D0B0C);
+  static Color greyColor = const Color(0xff9B9B9B);
+
 //
+}
+
+class AppFonts {
+  static const String poppinsFont = 'Poppins';
+
+  static const FontWeight normalFont = FontWeight.w400;
+  static const FontWeight mediumFont = FontWeight.w500;
+  static const FontWeight boldFont = FontWeight.w700;
+  static const FontWeight thinFont = FontWeight.w100;
 }
 
 class AppStrings {
@@ -23,8 +35,12 @@ class AppStrings {
   static const String page3Img = 'images/3.png';
   static const String gmImg = 'images/gm.png';
   static const String fbImg = 'images/fb.png';
+  static const String username = 'images/username.png';
+  static const String pass = 'images/pass.png';
   static const String onboardImg = 'images/onboard.png';
   static const String monibagImg = 'images/monibag.png';
+  static const String monibaglogo = 'images/monibagLogo.png';
+  static const String moniwithDot = 'images/moniDot.png';
   static const String strContinue = 'Continue';
   static const String strCreate = 'Create';
   static const String onboardPageStr = 'FAST AND CONVEINENT WAY TO';

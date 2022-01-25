@@ -6,7 +6,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-const Color _kAppColor = Color(0xFFFDDE6F);
 const double _kSize = 100;
 void main() {
   runApp(const MyApp());
@@ -39,7 +38,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   Timer? _timer;
-  int _start = 20;
+  int _start = 10;
 
   @override
   void initState() {
@@ -292,7 +291,11 @@ class Walkthrougth extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Text(
               title ?? '',
-              style: const TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.blackColor,
+                  fontFamily: AppFonts.poppinsFont),
             ),
           ),
           Padding(
@@ -302,7 +305,10 @@ class Walkthrougth extends StatelessWidget {
               textAlign: TextAlign.center,
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
+              style: TextStyle(
+                color: AppColors.greyColor,
+                fontWeight: FontWeight.normal,
+                fontFamily: AppFonts.poppinsFont,
                 fontSize: 17,
               ),
             ),

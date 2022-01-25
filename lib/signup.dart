@@ -26,13 +26,17 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(
-                      vertical: MediaQuery.of(context).size.height * 0.18),
-                  child: const Text(
-                    'monibag',
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-                  ),
-                ),
+                    padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.18),
+                    child: Image.asset(
+                      AppStrings.moniwithDot,
+                      height: 40,
+                    )
+                    // child: const Text(
+                    //   'monibag',
+                    //   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                    // ),
+                    ),
                 Row(
                   children: [
                     Padding(
@@ -42,6 +46,7 @@ class _SignUpState extends State<SignUp> {
                         style: const TextStyle(
                             color: AppColors.darkYellow,
                             fontSize: 30,
+                            fontFamily: AppFonts.poppinsFont,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -63,7 +68,10 @@ class _SignUpState extends State<SignUp> {
                             padding: EdgeInsets.symmetric(horizontal: 30),
                             child: Text(
                               'Forgot Password ?',
-                              style: TextStyle(color: AppColors.darkYellow),
+                              style: TextStyle(
+                                color: AppColors.darkYellow,
+                                fontFamily: AppFonts.poppinsFont,
+                              ),
                             ),
                           )
                         ],
@@ -99,6 +107,7 @@ class _SignUpState extends State<SignUp> {
                                   : AppStrings.strContinue,
                               style: const TextStyle(
                                   fontSize: 18,
+                                  fontFamily: AppFonts.poppinsFont,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600)),
                         )),
@@ -127,16 +136,24 @@ class _SignUpState extends State<SignUp> {
                 ),
                 RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(children: <TextSpan>[
+                  text: TextSpan(children: <TextSpan>[
                     TextSpan(
-                        text: "Don't have and account?",
-                        style: TextStyle(color: Colors.black87)),
-                    TextSpan(
+                      text: "Don't have and account?",
+                      style: TextStyle(
+                        color: AppColors.blackColor,
+                        fontFamily: AppFonts.poppinsFont,
+                      ),
+                    ),
+                    const TextSpan(
                         text: " SignUp",
                         style: TextStyle(
                             color: AppColors.darkYellow,
+                            fontFamily: AppFonts.poppinsFont,
                             fontWeight: FontWeight.bold)),
                   ]),
+                ),
+                const SizedBox(
+                  height: 30,
                 )
               ],
             ),
@@ -155,7 +172,10 @@ class _SignUpState extends State<SignUp> {
           decoration: InputDecoration(
             labelText: labelTxt, //babel text
             hintText: hintTxt ?? '', //hint text
-            prefixIcon: const Icon(Icons.people), //prefix iocn
+            prefixIcon: Image.asset(
+                labelTxt == 'User Name' ? AppStrings.username : AppStrings.pass,
+                height: 25,
+                width: 25), //prefix iocn
             hintStyle: const TextStyle(
                 fontSize: 18, fontWeight: FontWeight.normal), //hint text style
             labelStyle:
