@@ -171,7 +171,7 @@ class _WelcomeState extends State<Welcome> {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.65,
                   child: PageView(
-                    children: const <Widget>[
+                    children: const [
                       Walkthrougth(
                         textContent: AppStrings.page1Content,
                         title: AppStrings.page1Title,
@@ -196,7 +196,6 @@ class _WelcomeState extends State<Welcome> {
               ),
               Positioned(
                 top: MediaQuery.of(context).size.height * 0.74,
-                // left: MediaQuery.of(context).size.width * 0.35,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Center(
@@ -207,8 +206,6 @@ class _WelcomeState extends State<Welcome> {
                         color: Colors.grey.shade200, // Inactive color
                         activeColor: const Color(0xffE3BB2D),
                       ),
-                      // dotColor: Colors.black87,
-                      // dotActiveColor: Colors.amber),
                     ),
                   ),
                 ),
@@ -271,49 +268,46 @@ class Walkthrougth extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: AppColors.whiteColor),
-      // width: MediaQuery.of(context).size.width,
-      // height: MediaQuery.of(context).size.height,
-      child: Column(
-        children: [
-          Container(
-              height: MediaQuery.of(context).size.height * 0.4,
-              color: Colors.white,
-              child: Image.asset(
-                imageStr!,
-                fit: BoxFit.fill,
-              )),
-          // SizedBox(
-          //   height: MediaQuery.of(context).size.height * 0.5,
-          // ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Text(
-              title ?? '',
-              style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.blackColor,
-                  fontFamily: AppFonts.poppinsFont),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Text(
-              textContent ?? '',
-              textAlign: TextAlign.center,
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: AppColors.greyColor,
-                fontWeight: FontWeight.normal,
-                fontFamily: AppFonts.poppinsFont,
-                fontSize: 17,
+    return SingleChildScrollView(
+      child: Container(
+        decoration: BoxDecoration(color: AppColors.whiteColor),
+        child: Column(
+          children: [
+            Container(
+                height: MediaQuery.of(context).size.height * 0.3,
+                color: Colors.white,
+                child: Image.asset(
+                  imageStr!,
+                  fit: BoxFit.cover,
+                )),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Text(
+                title ?? '',
+                style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.blackColor,
+                    fontFamily: AppFonts.poppinsFont),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Text(
+                textContent ?? '',
+                textAlign: TextAlign.center,
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: AppColors.greyColor,
+                  fontWeight: FontWeight.normal,
+                  fontFamily: AppFonts.poppinsFont,
+                  fontSize: 17,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

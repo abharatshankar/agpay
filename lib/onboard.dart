@@ -47,15 +47,7 @@ class _OnBoardState extends State<OnBoard> {
                     child: Image.asset(
                       AppStrings.monibaglogo,
                       height: 40,
-                    )
-                    // child: Text(
-                    //   'Monibag',
-                    //   style: TextStyle(
-                    //       fontSize: 32,
-                    //       fontWeight: AppFonts.mediumFont,
-                    //       fontFamily: AppFonts.poppinsFont),
-                    // ),
-                    ),
+                    )),
                 const Padding(
                   padding: EdgeInsets.fromLTRB(30, 16, 30, 10),
                   child: Text(AppStrings.onboardPageStr,
